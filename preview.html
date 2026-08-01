@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREVIEW: Lily Pads & Poppy Paws Website Concept</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Unpublished design preview, not a live website.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%80%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+  /* --- Preview-only chrome: banner + watermark. Not part of the delivered production site. --- */
+  .preview-banner {
+    position: sticky; top: 0; z-index: 60;
+    background: #26173f;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+    border-bottom: 2px solid #fb8148;
+  }
+  .preview-banner strong { color: #ffc4a3; }
+  .watermark-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='340'%20height='200'%3E%3Ctext%20x='-20'%20y='120'%20transform='rotate(-28%20170%20100)'%20font-family='Inter,Arial,sans-serif'%20font-size='34'%20font-weight='700'%20fill='rgba(38,23,63,0.09)'%3EPREVIEW%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+  #site-header { top: 41px; }
+  @media (max-width: 640px) {
+    .preview-banner { font-size: 0.72rem; }
+  }
+</style>
+
+</head>
+<body class="bg-cream-50 text-brand-950 antialiased">
+
+<div class="preview-banner">
+  🔒 <strong>PREVIEW ONLY</strong>: an unpublished design concept prepared for Lily Pads &amp; Poppy Paws. Not a live website, and the booking form is disabled here.
+</div>
+<div class="watermark-overlay" aria-hidden="true"></div>
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-brand-700 focus:shadow-lg">Skip to content</a>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header" class="sticky z-40 border-b border-brand-100/80 bg-cream-50/90 backdrop-blur transition-shadow">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <a href="#main" class="flex items-center gap-2 font-display text-lg font-semibold text-brand-800 sm:text-xl">
+      <span aria-hidden="true" class="text-2xl">🐾</span>
+      Lily Pads <span class="text-accent-500">&amp;</span> Poppy Paws
+    </a>
+
+    <nav aria-label="Primary" class="hidden items-center gap-8 lg:flex">
+      <a href="#about" class="text-sm font-medium text-brand-800 hover:text-accent-600">About</a>
+      <a href="#services" class="text-sm font-medium text-brand-800 hover:text-accent-600">Services</a>
+      <a href="#gallery" class="text-sm font-medium text-brand-800 hover:text-accent-600">Gallery</a>
+      <a href="#reviews" class="text-sm font-medium text-brand-800 hover:text-accent-600">Reviews</a>
+      <a href="#faq" class="text-sm font-medium text-brand-800 hover:text-accent-600">FAQ</a>
+      <a href="#contact" class="text-sm font-medium text-brand-800 hover:text-accent-600">Contact</a>
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      <a href="tel:07752027606" class="text-sm font-semibold text-brand-700">📞 07752 027606</a>
+      <a href="#contact" class="btn-primary !px-5 !py-2.5 text-sm">Book Now</a>
+    </div>
+
+    <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center rounded-lg p-2 text-brand-800 lg:hidden" aria-label="Toggle navigation menu">
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-brand-100 bg-cream-50 lg:hidden">
+    <nav aria-label="Mobile" class="flex flex-col gap-1 px-4 py-3">
+      <a href="#about" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">About</a>
+      <a href="#services" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">Services</a>
+      <a href="#gallery" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">Gallery</a>
+      <a href="#reviews" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">Reviews</a>
+      <a href="#faq" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">FAQ</a>
+      <a href="#contact" class="rounded-lg px-3 py-2.5 text-brand-800 hover:bg-brand-100">Contact</a>
+      <a href="tel:07752027606" class="mt-2 rounded-lg px-3 py-2.5 font-semibold text-brand-700">📞 07752 027606</a>
+      <a href="#contact" class="btn-primary mt-1 w-full">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950">
+    <div class="absolute inset-0 opacity-25 mix-blend-overlay">
+      <img src="https://images.unsplash.com/photo-1719464454959-9cf304ef4774?fm=jpg&q=80&w=2000&auto=format&fit=crop" alt="" class="h-full w-full object-cover" loading="eager">
+    </div>
+    <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
+      <div>
+        <p class="section-eyebrow !bg-white/10 !text-white">🐾 Hemel Hempstead's 5-Star Rated Grooming Salon</p>
+        <h1 class="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+          Grooming your dog deserves, from people who actually love dogs.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-brand-100">
+          From a puppy's very first pamper to full breed-specific styling, Lily Pads &amp; Poppy Paws has been Hemel Hempstead's trusted, appointment-only grooming salon, rated a perfect 5 stars by 53 local dog owners.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="btn-primary">Book an Appointment</a>
+          <a href="tel:07752027606" class="btn-secondary">📞 Call 07752 027606</a>
+        </div>
+        <dl class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div>
+            <dt class="sr-only">Google rating</dt>
+            <dd class="font-display text-2xl font-semibold text-white">★ 5.0</dd>
+            <dd class="text-xs text-brand-200">53 Google Reviews</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Breeds</dt>
+            <dd class="font-display text-2xl font-semibold text-white">All</dd>
+            <dd class="text-xs text-brand-200">Breeds Welcome</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Booking</dt>
+            <dd class="font-display text-2xl font-semibold text-white">1:1</dd>
+            <dd class="text-xs text-brand-200">Appointment-Only Care</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Access</dt>
+            <dd class="font-display text-2xl font-semibold text-white">♿</dd>
+            <dd class="text-xs text-brand-200">Accessible Salon</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="relative hidden lg:block">
+        <div class="overflow-hidden rounded-[2.5rem] shadow-2xl ring-4 ring-white/10">
+          <img src="https://images.unsplash.com/photo-1719464454959-9cf304ef4774?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="A small dog mid-groom, being carefully trimmed by a professional groomer" class="h-[520px] w-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -left-6 rounded-2xl bg-white p-4 shadow-xl">
+          <p class="font-display text-3xl font-bold text-brand-700">★★★★★</p>
+          <p class="text-sm font-medium text-brand-600">5.0 from 53 reviews</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="border-b border-brand-100 bg-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 text-center sm:px-6 md:grid-cols-4 lg:px-8">
+      <div>
+        <p class="font-display text-xl font-semibold text-brand-800">🐕 All Breeds</p>
+        <p class="text-sm text-brand-600">Toy to giant breeds welcome</p>
+      </div>
+      <div>
+        <p class="font-display text-xl font-semibold text-brand-800">💜 Patient Care</p>
+        <p class="text-sm text-brand-600">Nervous &amp; rescue dogs a specialty</p>
+      </div>
+      <div>
+        <p class="font-display text-xl font-semibold text-brand-800">📅 Book Ahead</p>
+        <p class="text-sm text-brand-600">Appointment-only, unrushed grooms</p>
+      </div>
+      <div>
+        <p class="font-display text-xl font-semibold text-brand-800">🅿️ Easy Parking</p>
+        <p class="text-sm text-brand-600">Free street parking nearby</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-20 sm:py-28">
+    <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+      <div class="order-2 overflow-hidden rounded-[2.5rem] shadow-xl lg:order-1">
+        <img src="https://images.unsplash.com/photo-1611173622933-91942d394b04?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="A freshly bathed small dog wrapped snugly in a towel after grooming" class="h-[420px] w-full object-cover">
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="section-eyebrow">Meet the Team</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">Grooming with real patience, not a production line.</h2>
+        <p class="mt-6 text-brand-700">
+          Lily Pads &amp; Poppy Paws is a small, independent grooming salon on Lomond Road. It's the kind of place where your dog is a name, not a number. Led by groomer Lucy and a friendly, dog-obsessed team, every appointment is booked one-on-one, so your dog gets a calm, unrushed groom instead of a rushed slot on a conveyor belt.
+        </p>
+        <p class="mt-4 text-brand-700">
+          We've built a reputation for taking real time and care with nervous, reactive, senior and rescue dogs, the ones other salons sometimes struggle with. If your dog needs a little extra patience, that's exactly what you'll get here.
+        </p>
+        <ul class="mt-8 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 text-accent-500">✓</span>
+            <span class="text-brand-800"><strong>Small, independent salon</strong>, not a chain or a franchise.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 text-accent-500">✓</span>
+            <span class="text-brand-800"><strong>Specialist patience</strong> with nervous, senior and rescue dogs.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 text-accent-500">✓</span>
+            <span class="text-brand-800"><strong>Loyal local following</strong>: customers who've moved away still travel back.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="bg-brand-50 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow">Services &amp; Pricing</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">Grooming services for every coat &amp; character</h2>
+        <p class="mt-4 text-brand-700">Every groom is tailored to your dog's breed, coat and temperament. Prices below are an indicative guide; your exact price is confirmed at booking based on breed, size and coat condition.</p>
+      </div>
+
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="card flex flex-col">
+          <img src="https://images.unsplash.com/photo-1614261812340-5ee9a3ed33a3?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="A well-groomed black poodle standing on grass" class="mb-5 h-40 w-full rounded-2xl object-cover">
+          <h3 class="font-display text-lg font-semibold text-brand-900">Full Groom</h3>
+          <p class="mt-2 flex-1 text-sm text-brand-600">Bath, blow-dry, full brush-out, breed-standard or custom cut, ear &amp; paw tidy, and nail trim.</p>
+          <p class="mt-4 font-display text-xl font-semibold text-accent-600">From £35</p>
+        </article>
+        <article class="card flex flex-col">
+          <img src="https://images.unsplash.com/photo-1519224939581-4fbbdbeff92f?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="A fluffy long-coated white dog after a bath and brush" class="mb-5 h-40 w-full rounded-2xl object-cover">
+          <h3 class="font-display text-lg font-semibold text-brand-900">Bath &amp; Brush</h3>
+          <p class="mt-2 flex-1 text-sm text-brand-600">De-shedding bath, blow-dry and full brush-out with a light tidy. No cut included.</p>
+          <p class="mt-4 font-display text-xl font-semibold text-accent-600">From £20</p>
+        </article>
+        <article class="card flex flex-col">
+          <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="A young shih tzu puppy running happily on grass" class="mb-5 h-40 w-full rounded-2xl object-cover">
+          <h3 class="font-display text-lg font-semibold text-brand-900">Puppy's First Pamper</h3>
+          <p class="mt-2 flex-1 text-sm text-brand-600">A gentle, positive introduction to grooming for puppies under 6 months old.</p>
+          <p class="mt-4 font-display text-xl font-semibold text-accent-600">From £15</p>
+        </article>
+        <article class="card flex flex-col">
+          <img src="https://images.unsplash.com/photo-1513189643435-49f97650b367?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="A white toy poodle with a classic breed-standard groomed coat" class="mb-5 h-40 w-full rounded-2xl object-cover">
+          <h3 class="font-display text-lg font-semibold text-brand-900">Breed-Specific Styling</h3>
+          <p class="mt-2 flex-1 text-sm text-brand-600">Breed-standard trims for poodles, terriers, spaniels, schnauzers and more.</p>
+          <p class="mt-4 font-display text-xl font-semibold text-accent-600">From £40</p>
+        </article>
+      </div>
+
+      <p class="mt-8 text-center text-sm text-brand-600">Also available as add-ons or standalone visits: nail clipping, ear cleaning &amp; teeth brushing. <a href="#contact" class="font-semibold text-accent-600 underline underline-offset-2">Ask when you book →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow">Why Dog Owners Choose Us</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">What makes an appointment here different</h2>
+      </div>
+      <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-100 text-3xl">🐾</div>
+          <h3 class="mt-4 font-display font-semibold text-brand-900">All Breeds Welcome</h3>
+          <p class="mt-2 text-sm text-brand-600">From tiny toy breeds to big, boisterous giants.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-100 text-3xl">💜</div>
+          <h3 class="mt-4 font-display font-semibold text-brand-900">Patient With Nervous Dogs</h3>
+          <p class="mt-2 text-sm text-brand-600">Real experience with anxious, reactive and senior dogs.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-100 text-3xl">📅</div>
+          <h3 class="mt-4 font-display font-semibold text-brand-900">Appointment-Only</h3>
+          <p class="mt-2 text-sm text-brand-600">Unrushed, one-on-one attention, never a cage-drying queue.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-100 text-3xl">⭐</div>
+          <h3 class="mt-4 font-display font-semibold text-brand-900">5.0★ Rated Locally</h3>
+          <p class="mt-2 text-sm text-brand-600">53 Google reviews from Hemel Hempstead dog owners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="bg-brand-950 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow !bg-white/10 !text-white">Gallery</p>
+        <h2 class="font-display text-3xl font-semibold text-white sm:text-4xl">A few happy customers</h2>
+        <p class="mt-4 text-brand-200">Illustrative photos shown for this preview. Swap in real client transformations from <a href="https://www.instagram.com/lilypadspoppypaws/" class="underline underline-offset-2 hover:text-accent-400" target="_blank" rel="noopener">@lilypadspoppypaws</a> once live.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A calm black and white short-coated dog" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A small groomed dog wearing a polka dot outfit" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A corgi and a groomed brown dog together" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1581887936036-3f4f7f0b6679?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A long-coated dog relaxing on a grooming towel" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1678153184494-1f6fc14a673d?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A small dog neatly styled wearing a bandana" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A fluffy long-coated puppy after grooming" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="Two happy dogs out and about in Hertfordshire" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?fm=jpg&q=75&w=500&auto=format&fit=crop" alt="A cheerful groomed dog outdoors" class="h-48 w-full rounded-2xl object-cover ring-1 ring-white/10 transition hover:scale-[1.02] hover:opacity-90 sm:h-56" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section id="reviews" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow">Reviews</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">What Hemel Hempstead's dog owners say</h2>
+        <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-100 px-5 py-2">
+          <span class="font-display text-lg font-bold text-brand-800">★★★★★ 5.0</span>
+          <span class="text-sm text-brand-600">from 53 Google Reviews</span>
+        </div>
+      </div>
+      <div class="mt-14 grid gap-6 lg:grid-cols-3">
+        <blockquote class="card">
+          <p class="text-brand-700">"Booked in for my puppy's very first groom and they were so patient with her. Couldn't have asked for a better introduction."</p>
+          <footer class="mt-4 text-sm font-semibold text-brand-500">Google Review</footer>
+        </blockquote>
+        <blockquote class="card">
+          <p class="text-brand-700">"We moved half an hour away and we still come back for every appointment. That says it all really."</p>
+          <footer class="mt-4 text-sm font-semibold text-brand-500">Google Review</footer>
+        </blockquote>
+        <blockquote class="card">
+          <p class="text-brand-700">"My dog is nervous with strangers but the team took their time with him and he came home happy and looking brilliant."</p>
+          <footer class="mt-4 text-sm font-semibold text-brand-500">Google Review</footer>
+        </blockquote>
+      </div>
+      <p class="mt-8 text-center text-sm text-brand-600">Paraphrased from themes in real Google reviews for this preview.</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="bg-brand-50 py-20 sm:py-28">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">Common questions</h2>
+      </div>
+      <div class="mt-12 space-y-4" id="faq-list">
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            How often should my dog be groomed?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">Most breeds do best every 6–8 weeks, though it depends on coat type. Long-haired and curly-coated breeds often benefit from more frequent visits, and we're happy to recommend a schedule at your dog's first appointment.</div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            Do you groom all breeds and sizes?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">Yes, from tiny toy breeds to large, giant breeds. Let us know your dog's breed and size when you book so we can allocate the right amount of time.</div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            My dog is nervous or has never been groomed before. Can you help?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">Absolutely, this is something we're known for locally. Appointments are one-on-one and unrushed, so nervous, reactive, senior and rescue dogs get all the extra time and patience they need.</div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            Do I need to book in advance?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">Yes, we're appointment-only. That's how we keep every groom calm and unrushed, so call or use the form below and we'll find a time that suits you.</div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            What's the difference between a Full Groom and a Bath &amp; Brush?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">A Bath &amp; Brush covers washing, drying and a full brush-out with no cutting. A Full Groom includes all of that plus a breed-standard or custom cut, ear and paw tidy, and a nail trim.</div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl bg-white ring-1 ring-brand-100">
+          <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-brand-900" aria-expanded="false">
+            Is parking available?
+            <span class="faq-icon shrink-0 text-xl text-accent-500">+</span>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-brand-600">Yes, free street parking is available nearby, and the salon has a wheelchair-accessible car park and entrance.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE AREA ===== -->
+  <section class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow">Service Area</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-900 sm:text-4xl">Proudly grooming dogs across Hemel Hempstead &amp; Hertfordshire</h2>
+      </div>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Hemel Hempstead</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Boxmoor</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Apsley</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Berkhamsted</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Tring</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Kings Langley</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Bovingdon</span>
+        <span class="rounded-full bg-brand-100 px-5 py-2 text-sm font-medium text-brand-700">Chipperfield</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="bg-gradient-to-br from-brand-800 to-brand-950 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow !bg-white/10 !text-white">Get In Touch</p>
+        <h2 class="font-display text-3xl font-semibold text-white sm:text-4xl">Book your dog's appointment</h2>
+        <p class="mt-4 text-brand-200">Call, message, or use the form below and we'll get back to you to confirm a time.</p>
+      </div>
+
+      <div class="mt-14 grid gap-8 lg:grid-cols-5">
+
+        <div class="lg:col-span-2 space-y-6">
+          <div class="rounded-3xl bg-white/10 p-6 backdrop-blur">
+            <h3 class="font-display font-semibold text-white">Visit or call us</h3>
+            <ul class="mt-4 space-y-3 text-sm text-brand-100">
+              <li class="flex gap-3"><span aria-hidden="true">📍</span><span>42 Lomond Rd, Hemel Hempstead, Hertfordshire, HP2 6PA</span></li>
+              <li class="flex gap-3"><span aria-hidden="true">📞</span><a href="tel:07752027606" class="hover:text-white">07752 027606</a></li>
+              <li class="flex gap-3"><span aria-hidden="true">📷</span><a href="https://www.instagram.com/lilypadspoppypaws/" target="_blank" rel="noopener" class="hover:text-white">@lilypadspoppypaws</a></li>
+              <li class="flex gap-3"><span aria-hidden="true">♿</span><span>Wheelchair-accessible car park &amp; entrance</span></li>
+              <li class="flex gap-3"><span aria-hidden="true">🅿️</span><span>Free street parking nearby</span></li>
+            </ul>
+          </div>
+          <div class="rounded-3xl bg-white/10 p-6 backdrop-blur">
+            <h3 class="font-display font-semibold text-white">Opening hours</h3>
+            <dl class="mt-4 space-y-2 text-sm text-brand-100">
+              <div class="flex justify-between"><dt>Monday</dt><dd>Closed</dd></div>
+              <div class="flex justify-between"><dt>Tuesday – Friday</dt><dd>9:00 – 17:00</dd></div>
+              <div class="flex justify-between"><dt>Saturday</dt><dd>9:00 – 15:00</dd></div>
+              <div class="flex justify-between"><dt>Sunday</dt><dd>Closed</dd></div>
+            </dl>
+          </div>
+          <div class="overflow-hidden rounded-3xl ring-1 ring-white/10">
+            <iframe
+              title="Map showing Lily Pads & Poppy Paws, 42 Lomond Rd, Hemel Hempstead"
+              src="https://www.google.com/maps?q=42+Lomond+Rd,+Hemel+Hempstead,+HP2+6PA&output=embed"
+              width="100%" height="220" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form id="preview-form" class="lg:col-span-3 rounded-3xl bg-white p-6 sm:p-8">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-brand-800">Your name</label>
+              <input type="text" id="name" name="name" class="mt-1.5 w-full rounded-xl border border-brand-200 px-4 py-2.5 text-brand-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-brand-800">Phone number</label>
+              <input type="tel" id="phone" name="phone" class="mt-1.5 w-full rounded-xl border border-brand-200 px-4 py-2.5 text-brand-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+            <div>
+              <label for="breed" class="block text-sm font-semibold text-brand-800">Dog's breed</label>
+              <input type="text" id="breed" name="breed" class="mt-1.5 w-full rounded-xl border border-brand-200 px-4 py-2.5 text-brand-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-semibold text-brand-800">Service interested in</label>
+              <select id="service" name="service" class="mt-1.5 w-full rounded-xl border border-brand-200 px-4 py-2.5 text-brand-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+                <option>Full Groom</option>
+                <option>Bath &amp; Brush</option>
+                <option>Puppy's First Pamper</option>
+                <option>Breed-Specific Styling</option>
+                <option>Not sure, advise me</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm font-semibold text-brand-800">Message</label>
+              <textarea id="message" name="message" rows="4" class="mt-1.5 w-full rounded-xl border border-brand-200 px-4 py-2.5 text-brand-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" placeholder="Preferred day/time, anything we should know about your dog..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary mt-6 w-full sm:w-auto">Send Booking Request</button>
+          <p id="preview-form-note" class="mt-3 text-xs text-brand-500">🔒 Preview mode: this form is disabled and won't send anything. It becomes fully functional on the live site.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-brand-950 py-12 text-brand-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="#main" class="flex items-center gap-2 font-display text-lg font-semibold text-white">
+          <span aria-hidden="true" class="text-2xl">🐾</span> Lily Pads &amp; Poppy Paws
+        </a>
+        <p class="mt-3 text-sm">Hemel Hempstead's independent, 5-star rated dog grooming salon.</p>
+        <a href="https://www.instagram.com/lilypadspoppypaws/" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-200 hover:text-white">📷 @lilypadspoppypaws</a>
+      </div>
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Quick Links</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+          <li><a href="#reviews" class="hover:text-white">Reviews</a></li>
+          <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Services</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>Full Groom</li>
+          <li>Bath &amp; Brush</li>
+          <li>Puppy's First Pamper</li>
+          <li>Breed-Specific Styling</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Contact</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>42 Lomond Rd, Hemel Hempstead, HP2 6PA</li>
+          <li><a href="tel:07752027606" class="hover:text-white">07752 027606</a></li>
+          <li>Tue–Fri 9–5, Sat 9–3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
+      <p>© <span id="year"></span> Lily Pads &amp; Poppy Paws. All rights reserved.</p>
+      <p>Website design &amp; SEO by <span class="font-semibold text-brand-200">[Your Company Name]</span> (unpublished preview)</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Preview-only: disable the booking form so nothing is actually sent from this demo.
+  const previewForm = document.getElementById('preview-form');
+  if (previewForm) {
+    previewForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const note = document.getElementById('preview-form-note');
+      note.textContent = "🔒 This is a preview, so booking requests can't be sent yet. This form goes live when the site is published.";
+      note.classList.add('font-semibold', 'text-accent-600');
+    });
+  }
+</script>
+</body>
+</html>
